@@ -19,7 +19,7 @@ def lomuto_partition(A, lo, hi):
         if A[j] <= pivot:
             i += 1
             A[i], A[j] = A[j], A[i]
-    A[i+1], A[hi] = A[hi], A[i+1]
+    A[i+1], pivot = pivot, A[i+1]
     return i+1
 
 
