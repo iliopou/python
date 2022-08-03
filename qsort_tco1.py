@@ -12,7 +12,8 @@ def insertion_sort(A):
 
 
 def lomuto_partition(A, lo, hi):
-    pivot = median(sample(A,3))                                    # Pivot is the median of a random sample of 3 keys
+    pivot = median(sample(A,3))
+    pivot, A[hi] = A[hi], pivot                                   # Pivot is the median of a random sample of 3 keys.
     i = lo-1
     for j in range(lo, hi):
         if A[j] <= pivot:
@@ -35,3 +36,9 @@ def qsort(A, lo, hi):
     else:
      insertion_sort(A);                                           # Arrays with at most 9 elements are sorted by insertion sort
 
+arr = [-9,0,-77,9,8,9,-88,99,-66,9,8,7,-99,445,-8889,665,99,9,9,3,4,5,611,1,0,7,7,7,0,-22,-33,44]
+n = len(arr)
+qsort(arr,0,n-1)
+print ("Sorted array is:")
+for i in range(n):
+   print (arr[i],end=" ")
