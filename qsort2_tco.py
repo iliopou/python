@@ -11,7 +11,7 @@ def insertion_sort(A):
      A[(i + 1)] = key 
 
 def Hoare_partition(A, lo, hi):
-  pivot = A[lo];                                              # Pivot is the median of a random sample of 3 keys.
+  pivot = A[lo];                                              # Pivot is the leftmost key of A
   i = lo-1; j = hi+1;
   while (True):
     i +=1
