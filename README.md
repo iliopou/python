@@ -14,3 +14,6 @@ the median of a random sample of 3 keys from the array to be quicksorted. In the
 Hoare's original partition algorithm is used where on average it makes a third of the number of exchanges
 made by the partition algorithm of the other two scripts (qsort_tco.py and qsort_tco1.py). In these two scripts Lomuto's partition
 algorithm is used. 
+
+
+Added on 20220804: In qsort3_tco.py while loops are changed (adding AND) to test for crossing pointers in either branch.
