@@ -12,10 +12,10 @@ def insertion_sort(A):
 
 
 def lomuto_partition(A, lo, hi):
-    pivot = median(sample(A,3))
-    pivot, A[hi] = A[hi], pivot                                   # Pivot is the median of a random sample of 3 keys.
+    pivot = median(sample(A,3))                # Pivot is the median of a random sample of 3 keys
+    pivot, A[hi] = A[hi], pivot                # Swap pivot with rightmost key                 
     i = lo-1
-    for j in range(lo, hi):
+    for j in range(lo, hi-1):
         if A[j] <= pivot:
             i += 1
             A[i], A[j] = A[j], A[i]
