@@ -35,10 +35,3 @@ def qsort(A, lo, hi):
     else:
      insertion_sort(A);                                           # Arrays with at most 9 elements are sorted by insertion sort
 
-
-arr = [3,4,5,0,-4,2,4,5,6,3,2,-1,-9,4,3,2,5,6,7,4,3,0,11111,6,22,3,44,-66,5,-77,-6,4,3,2,0,3,4,-33,4,11,2,33,6,7,8,9,-88,-900,8999]
-n = len(arr)
-qsort(arr,0,n-1)
-print ("Sorted array is:")
-for i in range(n):
-   print (arr[i],end=" ")
