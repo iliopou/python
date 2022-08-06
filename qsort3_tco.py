@@ -1,5 +1,7 @@
 import random
 from statistics import median 
+import array as arr
+A = arr.array('i')
 
 def insertion_sort(A):    
  for j in range(1,len(A)):
