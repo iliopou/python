@@ -17,7 +17,7 @@ def Hoare_partition(A, lo, hi):
       i +=1 
   while A[j] > pivot and i < j:
       j -= 1
-  if (j >= i): 
+  if (i >= j):
     return j
   A[i], A[j] = A[j], A[i]
   
