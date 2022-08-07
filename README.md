@@ -19,3 +19,5 @@ algorithm is used.
 Added on 20220804: In qsort3_tco.py while loops are changed (adding AND) to test for crossing pointers in either branch.
 
 Added on 20220806: two quicksort scripts qsort4_tco.py and qsort5_tco.py. Compare their partition functions.
+
+Added on 20220807: two dual pivot quicksort algorithms.
