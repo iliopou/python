@@ -17,17 +17,17 @@ def partition(A, lo, hi):
 	l = lo + 1; i = l; r = hi - 1;
 	
 	while i <= r:
-		if A[i] < p:                                                                     
+	        if A[i] < p:                                                                     
 			A[i], A[l] = A[l], A[i]         # swap to left elements less than 'small' pivot                                          
-			l+= 1
-		elif A[i] >= q:                                              
-			while A[r] < p: 
-				r -= 1;
-			if i < r:
-				if A[r] < q:
-					A[i], A[r] = A[r], A[i];   # swap to right elements at least as large as the 'large' pivot
-					r -= 1;
-		i += 1;	
+			l+= 1; i += 1
+		elif A[i] < q:                                              
+			i += 1
+                else:
+                    A[i], A[r] = A[r], A[i]; r -= 1
+			
+			               # swap to right elements at least as large as the 'large' pivot
+					
+		
 	l -= 1;
 	r += 1;			
 				
