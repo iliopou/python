@@ -21,12 +21,10 @@ def partition(A, lo, hi):
 			A[i], A[l] = A[l], A[i]                                                   
 			l += 1
 		elif A[i] >= q:
-			while A[r] > q: 
+			while A[r] > q and i < r:
 				r -= 1;
-			if i < r:
-				if A[r] < p:
-					A[i], A[r] = A[r], A[i]; 
-					r -= 1;
+			
+			A[i], A[r] = A[r], A[i]; r -= 1;
 			if A[i] < p:
 				A[i], A[l] = A[l], A[i];
 				l += 1;
