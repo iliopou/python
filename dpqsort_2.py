@@ -1,5 +1,5 @@
-import array as arr                                           # Dual pivot quicksort, In this partitioning algorithm, each key smaller to 'small' pivot p
-A = arr.array('i')                                            # is compared once with p. Every other key is compared twice with p and q (the 'large' pivot)
+import array as arr                                           # Dual pivot quicksort. In this partitioning algorithm each key smaller to 'small' pivot p
+A = arr.array('i')                                            # is compared once with p. Every other key is compared with both pivots p and q (the 'large' pivot)
                                                               # Comparison count identical to one pivot Quicksort - see http://repository.essex.ac.uk/13266/1/iliop%20thesis.pdf
 def insertion_sort(A):    
  for j in range (1,len(A)):
