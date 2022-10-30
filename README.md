@@ -21,3 +21,10 @@ Added on 20220804: In qsort3_tco.py while loops are changed (adding AND) to test
 Added on 20220806: two quicksort scripts qsort4_tco.py and qsort5_tco.py. Compare their partition functions.
 
 Added on 20220807: two dual pivot quicksort algorithms.
+
+Added on 20221030: sort1.py and sort2.py. Both algorithms use 3-way partition and switch to insertion sort 
+below a cutoff number. sort2 utilises iterative
+quicksort with an explicit stack of size at most
+the (base 2) logarithm of array size. In both scripts I have used
+a simple test bed for experiments on the running
+times with various input arrays.
