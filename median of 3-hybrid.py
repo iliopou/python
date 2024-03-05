@@ -9,7 +9,10 @@ def insertion_sort(arr, low, high):
         for i in range(j, low, -1):
             if arr[i] < arr[i-1]:
                 arr[i-1], arr[i] = arr[i], arr[i-1]
-            break
+            else:
+                break
+                
+
 
 
 def median(arr, low, high):                                # compute the median of elements at locations low, mid, high and place it at location high
@@ -44,7 +47,9 @@ def partition(arr, low, high):
 def quicksort (arr, low, high):
     if low < high:                                         # if array has at least two elements
         if high - low + 1 <= 7:
-            insertion_sort (arr, low, high)                # insertion sort small arrays
+            insertion_sort (arr, low, high) 
+            return                                         # insertion sort small arrays
+        
         elif high - low + 1 <= 50:                         # else if array has at most 50 elements quicksort on a randomly chosen pivot
             m = random.randint(low, high);                  
             arr[m], arr[high] = arr[high], arr[m]
