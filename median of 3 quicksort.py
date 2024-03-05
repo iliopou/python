@@ -8,7 +8,8 @@ def insertion_sort(arr, low, high):
         for i in range(j, low, -1):
             if arr[i] < arr[i-1]:
                 arr[i-1], arr[i] = arr[i], arr[i-1]
-            break
+            else:
+                break
 
 
 def median (arr, low, high):                      # compute the median of elements at positions low, mid, high and place it at location high
