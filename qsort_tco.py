@@ -1,3 +1,8 @@
+import time
+import numpy as np
+
+
+    
 def insertion_sort(A):    
  for j in range(1,len(A)):
      key  = A[j];
@@ -30,6 +35,21 @@ def qsort(A, lo, hi):
             qsort(A, p+1, hi);
             hi = p - 1;
     else:
-     insertion_sort(A);                                           # Arrays with at most 9 elements are sorted by insertion sort
+     insertion_sort(A);                                                 # Arrays with at most 9 elements are sorted by insertion sort
 
+'''''
+num_runs = 100
+running_times = []
+for i in range(num_runs):
+  A = np.random.rand(pow(2, 11))                                        # if all n elements are equal (e.g. np.zeros) the algorithm sorts A with 2 x (n-1) comparisons
+  start_time = time.time()                                              # test for various inputs
+  qsort (A, 0, np.size(A)-1)
+  end_time = time.time()
+  execution_time = end_time - start_time
+  running_times.append(execution_time) 
+  #print(f"Is A sorted? {is_sorted(A)}")    check
 
+rounded_times = [round(t, 2) for t in running_times]
+print("Execution times in seconds:", rounded_times)
+
+'''
