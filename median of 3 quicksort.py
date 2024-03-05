@@ -49,7 +49,8 @@ def quicksort(arr, low, high):
     
     while low < high: 
         if high - low + 1 <= 6:                 
-            insertion_sort (arr, low, high)                  # Insertion sort small arrays each of size at most 6. Cutoff value of 6 selected experimentally.                          
+            insertion_sort (arr, low, high) 
+            return                                           # Insertion sort small arrays each of size at most 6. Cutoff value of 6 selected experimentally.                          
         p = partition (arr, low, high)
         if p - low < high - p:                               # Recurse on smaller array in order to use at most log(arr size) stack space
             quicksort(arr, low, p - 1)
