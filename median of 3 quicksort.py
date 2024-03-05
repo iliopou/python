@@ -50,13 +50,15 @@ def quicksort(arr, low, high):
     while low < high: 
         if high - low + 1 <= 6:                 
             insertion_sort (arr, low, high) 
-            return                                           # Insertion sort small arrays each of size at most 6. Cutoff value of 6 selected experimentally.                          
+            return                                               # Insertion sort small arrays each of size at most 6. Cutoff value of 6 selected experimentally.                          
+        
         p = partition (arr, low, high)
-        if p - low < high - p:                               # Recurse on smaller array in order to use at most log(arr size) stack space
+        if p - low < high - p:                                    # Recurse on smaller array in order to use at most log(arr size) stack space
             quicksort(arr, low, p - 1)
             low = p + 1
-        quicksort(arr, p + 1, high)
-        high = p - 1
+        else:
+            quicksort(arr, p + 1, high)
+            high = p - 1
         
     
 
@@ -65,7 +67,7 @@ def quicksort(arr, low, high):
 num_runs = 100
 running_times = []
 for i in range(num_runs):
-  A = np.random.rand(pow(2, 16))
+  A = np.random.rand(pow(2, 17))
   start_time = time.time()
   quicksort(A, 0, np.size(A)-1)
   end_time = time.time()
