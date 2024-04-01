@@ -34,8 +34,9 @@ def partition(arr, low, high):
             # if i==high: break          # test can be discarded as i will stop on equal value(s) to pivot
         
         while arr[j] > pivot:
-            j -= 1
             if j==low: break             # ensure j does not run out of bounds
+            j -= 1
+            
         
         if i >= j:
             break
@@ -50,8 +51,8 @@ def quicksort_iterative (arr, low, high):
     while stack:                          # stack in worst case is of order of arr size
         low, high = stack.pop ()
        
-        if high - low + 1 <= 6:
-            insertion_sort (arr, low, high)
+        #if high - low + 1 <= 6:
+            #insertion_sort (arr, low, high)
         
         p = partition (arr, low, high)
         if p - 1 > low:
