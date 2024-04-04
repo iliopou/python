@@ -53,14 +53,14 @@ def quicksort_iterative (arr, low, high):
     while stack:                          # stack in worst case is of order of arr size
         low, high = stack.pop ()
        
-        #if high - low + 1 <= 6:
-            #insertion_sort (arr, low, high)
-        
-        p = partition (arr, low, high)
-        if p - 1 > low:
-            stack.append ((low, p - 1))
-        if high > p + 1:
-            stack.append ((p + 1, high))                           
+        if high - low + 1 <= 10:         # cutoff value 10 determined experimentally
+            insertion_sort (arr, low, high)
+        else:
+            p = partition (arr, low, high)
+            if p - 1 > low:
+                stack.append ((low, p - 1))
+            if high > p + 1:
+                stack.append ((p + 1, high))                           
         
         
          
