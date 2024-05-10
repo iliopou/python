@@ -36,7 +36,7 @@ def partition(arr, low, high):
         
         while arr[j] > pivot:
             j -= 1
-            if j==low: break                        # ensure j does not run out of bounds
+            #if j==low: break                        # test can be discarded since pivot is the median of 3
         
         if i >= j:
             break
